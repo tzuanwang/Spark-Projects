@@ -1,0 +1,27 @@
+id,name,department,salary
+1,John Doe,Engineering,100000
+2,Jane Smith,Engineering,110000
+3,Mike Johnson,HR,95000
+4,Sarah Lee,HR,85000
+5,Chris Green,Marketing,90000
+6,Linda Brown,Marketing,98000
+7,Tom White,Finance,105000
+8,Amy Black,Finance,102000
+9,Robert King,Engineering,108000
+10,Mary Blue,HR,92000
+11,David Grey,Engineering,115000
+12,Emma Stone,Engineering,112000
+13,James Bond,HR,93000
+14,Olivia Brown,HR,87000
+15,Lucas Green,Marketing,95000
+16,Isabella White,Marketing,99000
+17,Henry Black,Finance,107000
+18,Emily Blue,Finance,104000
+19,Daniel King,Sales,96000
+20,Sophia Green,Sales,98000
+21,Michael Johnson,IT,110000
+22,Charlotte Lee,IT,108000
+23,William Brown,Operations,95000
+24,Amelia White,Operations,97000
+25,Alexander Black,Legal,105000
+26,Mia Blue,Legal,102000
