@@ -1,3 +1,6 @@
 /venv
 /spark-logs
 /spark-worker-logs
+
+.DS_Store
+*/.DS_Store
