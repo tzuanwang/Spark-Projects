@@ -61,8 +61,11 @@ You can find these folders in the project directory.
 
 Once the containers are up, you can access the Spark Master UI at `http://localhost:8080` and the Spark History UI at `http://localhost:18080`.
 
+Once you finish writing your Spark application in the `/spark_apps` folder, you can use `make submit` to test it. For example, to test if everything works properly after compose up with the provided `employee_transform.py` application, run:
+```sh
+make submit employee_transform.py
+```
+
 **Note**: Ensure you update the `.env.spark` file with your own `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for the project to work properly.
 
 **Note:** This project uses Spark version `3.4.4`. If you wanna run the driver on your local machine, you might need to set up a virtual environment (venv) or ensure that your `pyspark` version is also `3.4.4`.
-
-
