@@ -29,9 +29,9 @@ RUN curl https://dlcdn.apache.org/spark/spark-3.4.4/spark-3.4.4-bin-hadoop3.tgz 
 
 ADD https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/3.3.4/hadoop-aws-3.3.4.jar /opt/spark/jars/
 ADD https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-common/3.3.4/hadoop-common-3.3.4.jar /opt/spark/jars/
-# ADD https://repo1.maven.org/maven2/software/amazon/awssdk/bundle/2.29.9/bundle-2.29.9.jar /opt/spark/jars/
 ADD https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.11.1034/aws-java-sdk-bundle-1.11.1034.jar /opt/spark/jars/
- 
+ADD https://repo1.maven.org/maven2/net/snowflake/snowflake-jdbc/3.23.1/snowflake-jdbc-3.23.1.jar /opt/spark/jars/
+ADD https://repo1.maven.org/maven2/net/snowflake/spark-snowflake_2.12/2.16.0-spark_3.4/spark-snowflake_2.12-2.16.0-spark_3.4.jar /opt/spark/jars/
 
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt

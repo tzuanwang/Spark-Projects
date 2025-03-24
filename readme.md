@@ -1,7 +1,7 @@
 # Spark Docker Standalone Cluster
 
 ## Overview
-This project uses Docker Compose to manage a Spark cluster. The `Makefile` provides several commands to build, run, and manage the cluster.
+This project uses Docker Compose to manage a Standalone Spark cluster. The `Makefile` provides several commands to build, run, and manage the cluster.
 
 ## Getting Started
 Before running any commands, please refer to the `Makefile` for available targets and their descriptions.
@@ -61,11 +61,21 @@ You can find these folders in the project directory.
 
 Once the containers are up, you can access the Spark Master UI at `http://localhost:8080` and the Spark History UI at `http://localhost:18080`.
 
-Once you finish writing your Spark application in the `/spark_apps` folder, you can use `make submit` to test it. For example, to test if everything works properly after compose up with the provided `employee_transform.py` application, run:
+Once you finish writing your Spark application in the `/spark_apps` folder, you can use `make submit` to test it. For example, to test if everything works properly after compose up with the provided `employee_transform.py` example application, run:
 ```sh
-make submit employee_transform.py
+make submit example-employee_transform.py
 ```
 
-**Note**: Ensure you update the `.env.spark` file with your own `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for the project to work properly.
+So do the same for testing the connection to AWS and Snowflake with the provided example applications, run:
+```sh
+make submit example-read-csv-from-S3.py
+```
+and
+```sh
+make submit example-read-table-from-Snowflake.py
+```
+
+
+**Note**: Ensure you update the `.env.spark` file with your own `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and all Snowflake configs before docker compose-up for the project to work properly or you can simply update and do `make run` or `make run-scaled`.
 
 **Note:** This project uses Spark version `3.4.4`. If you wanna run the driver on your local machine, you might need to set up a virtual environment (venv) or ensure that your `pyspark` version is also `3.4.4`.
