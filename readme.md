@@ -78,4 +78,4 @@ make submit example-read-table-from-Snowflake.py
 
 **Note**: Ensure you update the `.env.spark` file with your own `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and all Snowflake configs before docker compose-up for the project to work properly or you can simply update and do `make run` or `make run-scaled`.
 
-**Note:** This project uses Spark version `3.4.4`. If you wanna run the driver on your local machine, you might need to set up a virtual environment (venv) or ensure that your `pyspark` version is also `3.4.4`.
+**Note:** This project uses Spark version `3.5.6`. If you wanna run the driver on your local machine, you might need to set up a virtual environment (venv) or ensure that your `pyspark` version is also `3.5.6`.
